@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Recipe Card</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="recipe-card">
+    <div class="image-container">
+      <img src="c:\Users\Maulik\OneDrive\Pictures\Screenshots\chocolate-cake.png" alt="Chocolate Cake" class="hero-img">
+    </div>
+    <div class="content">
+      <h1>🍫 Chocolate Cake</h1>
+      <p class="prep-time">Prep Time: <span id="prep-value">45</span> mins</p>
+
+      <div class="timer-container">
+        <svg class="timer-svg" width="120" height="120">
+          <circle class="bg" cx="60" cy="60" r="54" />
+          <circle class="progress" cx="60" cy="60" r="54" />
+          <text x="60" y="65"  class="timer-text" id="time-text">45min</text>
+        </svg>
+      </div>
+
+      <button onclick="toggleSection('ingredients')">Show Ingredients</button>
+      <ul id="ingredients" class="hidden">
+        <li>1 ½ cups flour</li>
+        <li>1 cup sugar</li>
+        <li>½ cup cocoa powder</li>
+        <li>1 tsp baking soda</li>
+        <li>½ tsp salt</li>
+        <li>1 cup water</li>
+        <li>½ cup oil</li>
+        <li>1 tbsp vinegar</li>
+        <li>1 tsp vanilla extract</li>
+      </ul>
+
+      <button onclick="toggleSection('steps')">Show Steps</button>
+      <ol id="steps" class="hidden">
+        <li>Preheat oven to 350°F.</li>
+        <li>Mix dry ingredients.</li>
+        <li>Add wet ingredients and stir.</li>
+        <li>Pour into greased pan.</li>
+        <li>Bake for 30–35 minutes.</li>
+        <li>Cool and enjoy!</li>
+      </ol>
+
+      <div class="actions">
+        <button onclick="startCooking()">Start Cooking</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

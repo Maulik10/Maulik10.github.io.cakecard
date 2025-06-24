@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f9e2e2, #fce3fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.recipe-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+}
+.hero-img:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #6a0572;
+}
+
+.prep-time {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+button {
+  margin: 10px 5px;
+  padding: 10px 18px;
+  background: #6a0572;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #4d025b;
+}
+
+ul, ol {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #f3d9f5;
+}
+
+.hidden {
+  display: none;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.progress-container {
+  background: #e0e0e0;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #6a0572;
+  transition: width 0.4s ease;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.timer-svg circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.timer-svg text {
+  transform: none;
+}
+
+
+.bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 12;
+}
+
+.progress {
+  fill: none;
+  stroke: purple;
+  stroke-width: 12;
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  transition: stroke-dashoffset 1s linear;
+  transform: rotate(0deg);
+  transform-origin: center;
+}
+
+.timer-text {
+  font-size: 20px;
+  font-weight: bold;
+  fill: black;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+
+#time-left {
+  transform: rotate(90deg);
+  margin-top: -60px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.timer-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #5a005a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #fff0ff;
+  color: #5a005a;
+  box-shadow: 0 4px 8px rgba(90, 0, 90, 0.15);
+  transform: none; /* remove unwanted rotation */
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-card {
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .circular-chart {
+    width: 60px;
+    height: 60px;
+  }
+}
